@@ -20,8 +20,7 @@
  	   {
     "id": 3,
     "codigo": "383517",
-    "nome": "BRINCO ARGOLINHA CORACAO
-VAZADO",
+    "nome": "BRINCO ARGOLINHA CORACAO VAZADO",
     "categoria": "brinco",
     "preco": "R$ 51,00",
     "descricao": "",
@@ -30,7 +29,7 @@ VAZADO",
     {
     "id": 4,
     "codigo": "220004",
-    "nome": "BRINCO REDONDO CRAVEJADO"
+    "nome": "BRINCO REDONDO CRAVEJADO",
     "categoria": "brinco",
     "preco": "R$59,90",
     "descricao": "",
@@ -48,8 +47,7 @@ VAZADO",
     {
     "id": 6,
     "codigo": "237958",
-    "nome": "BRINCO ARGOLINHA DOIS
-CORACOES VAZADO",
+    "nome": "BRINCO ARGOLINHA DOIS CORACOES VAZADO",
     "categoria": "brinco",
     "preco": "R$ 60,00",
     "descricao": "",
@@ -76,8 +74,7 @@ CORACOES VAZADO",
     {
     "id": 9,
     "codigo": "269159",
-    "nome": "BRINCO ARGOLA COM TREVO
-VERMELHO",
+    "nome": "BRINCO ARGOLA COM TREVO VERMELHO",
     "categoria": "brinco",
     "preco": " R$ 87,00",
     "descricao": "",
@@ -86,8 +83,7 @@ VERMELHO",
     {
     "id": 10,
     "codigo": "153924",
-    "nome": "BRINCO ARGOLINHA CORAÇÃO
-PENDURADO",
+    "nome": "BRINCO ARGOLINHA CORAÇÃO PENDURADO",
     "categoria": "brinco",
     "preco": "R$ 63,00",
     "descricao": "",

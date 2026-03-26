@@ -85,18 +85,19 @@
 
             lista.forEach(prod => {
                 const html = `
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card product-card">
-                            <img src="${prod.imagem}" class="card-img-top product-img" alt="${prod.nome}">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">${prod.nome}</h5>
-                                <p class="card-text text-muted small">${prod.descricao}</p>
-                                <h4 class="text-dark mt-auto">R$ ${prod.preco}</h4>
-                                <a href="https://wa.me/5533936180076?text=Olá! Vi o produto *${prod.nome}* no catálogo e gostaria de mais informações." 
-                                   class="btn whatsapp-btn w-100 mt-2" target="_blank">Pedir agora</a>
-                            </div>
-                        </div>
-                    </div>`;
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card product-card">
+            <img src="${prod.imagem}" class="card-img-top product-img" alt="${prod.nome}">
+            <div class="card-body d-flex flex-column">
+                <small class="text-muted">Ref: ${prod.codigo}</small>
+                <h5 class="card-title">${prod.nome}</h5>
+                <p class="card-text text-muted small">${prod.descricao}</p>
+                <h4 class="text-dark mt-auto">R$ ${prod.preco}</h4>
+                <a href="https://wa.me/5533936180076?text=Olá! Gostaria de saber sobre a peça ${prod.nome} (Ref: ${prod.codigo})" 
+                   class="btn whatsapp-btn w-100 mt-2" target="_blank">Pedir agora</a>
+            </div>
+        </div>
+    </div>`;
                 grid.innerHTML += html;
             });
 

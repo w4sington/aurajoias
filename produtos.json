@@ -1,26 +1,312 @@
 [
-    {
+   {
         "id": 1,
-        "nome": "Anel Solitário Brilhante",
-        "categoria": "anel",
-        "preco": "149,90",
-        "descricao": "Banhado a ródio com zircônia central.",
-        "imagem": "img/anel01.jpg"
+        "codigo": "",
+        "nome": "Brinco flor cravejado",
+        "categoria": "brinco",
+        "preco": "00,00",
+        "descricao": "brinco de flor cravejado banhado a ouro 18k",
+        "imagem": "imagens/brinco_1"
     },
     {
         "id": 2,
-        "nome": "Colar Elo Português",
-        "categoria": "colar",
-        "preco": "220,00",
-        "descricao": "Corrente de 45cm banhada a ouro 18k.",
-        "imagem": "img/colar01.jpg"
+        "codigo": "773493",
+        "nome": "BRINCO TREVO DE ZIRCONIA",
+        "categoria": "brinco",
+        "preco": "R$ 51,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_2"
+    },
+ 	   {
+    "id": 3,
+    "codigo": "383517",
+    "nome": "BRINCO ARGOLINHA CORACAO
+VAZADO",
+    "categoria": "brinco",
+    "preco": "R$ 51,00",
+    "descricao": "",
+    "imagem": "imagens/brinco_3"
     },
     {
-    "id": 3,
-    "nome": "Quadrado Interligado Cravejado",
+    "id": 4,
+    "codigo": "220004",
+    "nome": "BRINCO REDONDO CRAVEJADO"
     "categoria": "brinco",
-    "preco": "85,00",
-    "descricao": "Prático e elegante para o dia a dia.",
-    "imagem": "imagens/3"
+    "preco": "R$59,90",
+    "descricao": "",
+    "imagem": "imagens/brico_4"
+    },
+    {
+    "id": 5,
+    "codigo": "686718",
+    "nome": "BRINCO PICOLE",
+    "categoria": "brinco",
+    "preco": "R$ 18,00",
+    "descricao": "",
+    "imagem": "imagens/brinco_5"
+    },
+    {
+    "id": 6,
+    "codigo": "237958",
+    "nome": "BRINCO ARGOLINHA DOIS
+CORACOES VAZADO",
+    "categoria": "brinco",
+    "preco": "R$ 60,00",
+    "descricao": "",
+    "imagem": "imagens/brinco_6"
+    },
+    {
+    "id": 7,
+    "codigo": "173805",
+    "nome": "BRINCO CORAÇÃO PENDURADO",
+    "categoria": "brinco",
+    "preco": " R$ 126,00",
+    "descricao": "",
+    "imagem": "imagens/brinco_7"
+    },
+    {
+    "id": 8,
+    "codigo": "416119",
+    "nome": " BRINCO GOTA PEDRA CRISTAL",
+    "categoria": "brinco",
+    "preco": " R$ 117,00",
+    "descricao": "",
+    "imagem": "imagens/brinco_8"
+    },
+    {
+    "id": 9,
+    "codigo": "269159",
+    "nome": "BRINCO ARGOLA COM TREVO
+VERMELHO",
+    "categoria": "brinco",
+    "preco": " R$ 87,00",
+    "descricao": "",
+    "imagem": "imagens/brico_9"
+    },
+    {
+    "id": 10,
+    "codigo": "153924",
+    "nome": "BRINCO ARGOLINHA CORAÇÃO
+PENDURADO",
+    "categoria": "brinco",
+    "preco": "R$ 63,00",
+    "descricao": "",
+    "imagem": "imagens/brinco_10"
+    },
+    {
+    "id": 11,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 12,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 13,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 14,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 15,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 16,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 17,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 18,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 20,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 21,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 22,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 23,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 24,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 25,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 26,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 27,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 28,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 29,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 30,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 31,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 32,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 33,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 34,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
+    },
+    {
+    "id": 35,
+    "codigo": "",
+    "nome": "",
+    "categoria": "brinco",
+    "preco": "",
+    "descricao": "",
+    "imagem": "imagens/"
     }
 ]

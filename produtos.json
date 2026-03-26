@@ -15,7 +15,7 @@
         "categoria": "brinco",
         "preco": "R$ 51,00",
         "descricao": "",
-        "imagem": "imagens/brinco_2"
+        "imagem": "imagens/brinco_2.JPG"
     },
  	   {
     "id": 3,
@@ -24,7 +24,7 @@
     "categoria": "brinco",
     "preco": "R$ 51,00",
     "descricao": "",
-    "imagem": "imagens/brinco_3"
+    "imagem": "imagens/brinco_3.JPG"
     },
     {
     "id": 4,
@@ -33,7 +33,7 @@
     "categoria": "brinco",
     "preco": "R$59,90",
     "descricao": "",
-    "imagem": "imagens/brico_4"
+    "imagem": "imagens/brico_4.JPG"
     },
     {
     "id": 5,
@@ -42,7 +42,7 @@
     "categoria": "brinco",
     "preco": "R$ 18,00",
     "descricao": "",
-    "imagem": "imagens/brinco_5"
+    "imagem": "imagens/brinco_5.JPG"
     },
     {
     "id": 6,
@@ -51,7 +51,7 @@
     "categoria": "brinco",
     "preco": "R$ 60,00",
     "descricao": "",
-    "imagem": "imagens/brinco_6"
+    "imagem": "imagens/brinco_6.JPG"
     },
     {
     "id": 7,
@@ -60,7 +60,7 @@
     "categoria": "brinco",
     "preco": " R$ 126,00",
     "descricao": "",
-    "imagem": "imagens/brinco_7"
+    "imagem": "imagens/brinco_7.JPG"
     },
     {
     "id": 8,
@@ -69,7 +69,7 @@
     "categoria": "brinco",
     "preco": " R$ 117,00",
     "descricao": "",
-    "imagem": "imagens/brinco_8"
+    "imagem": "imagens/brinco_8.JPG"
     },
     {
     "id": 9,
@@ -78,7 +78,7 @@
     "categoria": "brinco",
     "preco": " R$ 87,00",
     "descricao": "",
-    "imagem": "imagens/brico_9"
+    "imagem": "imagens/brico_9.JPG"
     },
     {
     "id": 10,
@@ -87,7 +87,7 @@
     "categoria": "brinco",
     "preco": "R$ 63,00",
     "descricao": "",
-    "imagem": "imagens/brinco_10"
+    "imagem": "imagens/brinco_10.JPG"
     },
     {
     "id": 11,

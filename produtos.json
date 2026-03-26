@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nome": "Anel Solitário Brilhante",
+        "categoria": "anel",
+        "preco": "149,90",
+        "descricao": "Banhado a ródio com zircônia central.",
+        "imagem": "img/anel01.jpg"
+    },
+    {
+        "id": 2,
+        "nome": "Colar Elo Português",
+        "categoria": "colar",
+        "preco": "220,00",
+        "descricao": "Corrente de 45cm banhada a ouro 18k.",
+        "imagem": "img/colar01.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Brinco Argola Click",
+        "categoria": "brinco",
+        "preco": "85,00",
+        "descricao": "Prático e elegante para o dia a dia.",
+        "imagem": "img/brinco01.jpg"
+    }
+]

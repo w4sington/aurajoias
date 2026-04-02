@@ -1,308 +1,92 @@
 [
-   {
+    {
         "id": 1,
         "codigo": "",
-        "nome": "Brinco flor cravejado",
+        "nome": "Brinco Flor Cravejado",
         "categoria": "brinco",
-        "preco": "00,00",
-        "descricao": "brinco de flor cravejado banhado a ouro 18k",
+        "preco": "",
+        "descricao": "Brinco de flor cravejado banhado a ouro 18k",
         "imagem": "imagens/brinco_1.JPG"
     },
     {
         "id": 2,
         "codigo": "773493",
-        "nome": "BRINCO TREVO DE ZIRCONIA",
+        "nome": "Brinco Trevo de Zircônia",
         "categoria": "brinco",
         "preco": "51,00",
         "descricao": "",
         "imagem": "imagens/brinco_2.JPG"
     },
- 	   {
-    "id": 3,
-    "codigo": "383517",
-    "nome": "BRINCO ARGOLINHA CORACAO VAZADO",
-    "categoria": "brinco",
-    "preco": "51,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_3.JPG"
+    {
+        "id": 3,
+        "codigo": "383517",
+        "nome": "Brinco Argolinha Coração Vazado",
+        "categoria": "brinco",
+        "preco": "51,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_3.JPG"
     },
     {
-    "id": 4,
-    "codigo": "220004",
-    "nome": "BRINCO REDONDO CRAVEJADO",
-    "categoria": "brinco",
-    "preco": "59,90",
-    "descricao": "",
-    "imagem": "imagens/brinco_4.JPG"
+        "id": 4,
+        "codigo": "220004",
+        "nome": "Brinco Redondo Cravejado",
+        "categoria": "brinco",
+        "preco": "59,90",
+        "descricao": "",
+        "imagem": "imagens/brinco_4.JPG"
     },
     {
-    "id": 5,
-    "codigo": "686718",
-    "nome": "BRINCO PICOLE",
-    "categoria": "brinco",
-    "preco": "18,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_5.JPG"
+        "id": 5,
+        "codigo": "686718",
+        "nome": "Brinco Picolé",
+        "categoria": "brinco",
+        "preco": "18,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_5.JPG"
     },
     {
-    "id": 6,
-    "codigo": "237958",
-    "nome": "BRINCO ARGOLINHA DOIS CORACOES VAZADO",
-    "categoria": "brinco",
-    "preco": "60,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_6.JPG"
+        "id": 6,
+        "codigo": "237958",
+        "nome": "Brinco Argolinha Dois Corações Vazado",
+        "categoria": "brinco",
+        "preco": "60,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_6.JPG"
     },
     {
-    "id": 7,
-    "codigo": "173805",
-    "nome": "BRINCO CORAÇÃO PENDURADO",
-    "categoria": "brinco",
-    "preco": " 126,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_7.JPG"
+        "id": 7,
+        "codigo": "173805",
+        "nome": "Brinco Coração Pendurado",
+        "categoria": "brinco",
+        "preco": "126,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_7.JPG"
     },
     {
-    "id": 8,
-    "codigo": "416119",
-    "nome": " BRINCO GOTA PEDRA CRISTAL",
-    "categoria": "brinco",
-    "preco": " 117,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_8.JPG"
+        "id": 8,
+        "codigo": "416119",
+        "nome": "Brinco Gota Pedra Cristal",
+        "categoria": "brinco",
+        "preco": "117,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_8.JPG"
     },
     {
-    "id": 9,
-    "codigo": "269159",
-    "nome": "BRINCO ARGOLA COM TREVO VERMELHO",
-    "categoria": "brinco",
-    "preco": "87,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_9.JPG"
+        "id": 9,
+        "codigo": "269159",
+        "nome": "Brinco Argola com Trevo Vermelho",
+        "categoria": "brinco",
+        "preco": "87,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_9.JPG"
     },
     {
-    "id": 10,
-    "codigo": "153924",
-    "nome": "BRINCO ARGOLINHA CORAÇÃO PENDURADO",
-    "categoria": "brinco",
-    "preco": "63,00",
-    "descricao": "",
-    "imagem": "imagens/brinco_10.JPG"
-    },
-    {
-    "id": 11,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 12,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 13,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 14,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 15,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 16,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 17,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 18,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 20,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 21,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 22,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 23,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 24,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 25,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 26,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 27,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 28,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 29,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 30,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 31,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 32,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 33,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 34,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
-    },
-    {
-    "id": 35,
-    "codigo": "",
-    "nome": "",
-    "categoria": "brinco",
-    "preco": "",
-    "descricao": "",
-    "imagem": "imagens/"
+        "id": 10,
+        "codigo": "153924",
+        "nome": "Brinco Argolinha Coração Pendurado",
+        "categoria": "brinco",
+        "preco": "63,00",
+        "descricao": "",
+        "imagem": "imagens/brinco_10.JPG"
     }
 ]

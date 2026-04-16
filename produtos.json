@@ -88,5 +88,14 @@
         "preco": "63,00",
         "descricao": "",
         "imagem": "imagens/brinco_10.JPG"
+    },
+    {
+        "id": 11,
+        "codigo": "1234",
+        "nome": "teste",
+        "categoria": "anel",
+        "preco": "",
+        "descricao": "",
+        "imagem": "imagens/WhatsApp Image 2026-04-14 at 09.41.28.jpeg"
     }
 ]

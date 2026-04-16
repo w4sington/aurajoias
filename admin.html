@@ -297,6 +297,32 @@
             color: #bbb;
         }
         .empty-state i { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+
+        /* GitHub settings */
+        .github-panel {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 20px 28px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--gold);
+        }
+        .btn-github {
+            background: #24292e;
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .btn-github:hover { background: #404448; color: white; }
+        .btn-github:disabled { background: #888; cursor: not-allowed; }
+        .github-status {
+            font-size: 0.78rem;
+            margin-top: 6px;
+        }
     </style>
 </head>
 <body>
@@ -308,9 +334,15 @@
                 <span class="brand">Aura Joias</span>
                 <span class="subtitle d-block" style="margin-top:-2px">Painel de Cadastro</span>
             </div>
-            <a href="index.html" class="catalog-link">
-                <i class="bi bi-shop me-1"></i>Ver catálogo
-            </a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="index.html" class="catalog-link">
+                    <i class="bi bi-shop me-1"></i>Ver catálogo
+                </a>
+                <button class="btn btn-sm" onclick="toggleGithubSettings()" title="Configurações do GitHub"
+                    style="background:rgba(255,255,255,0.1);color:#aaa;border:1px solid #444;border-radius:8px;font-size:0.8rem;padding:5px 12px;">
+                    <i class="bi bi-github me-1"></i>GitHub
+                </button>
+            </div>
         </div>
     </div>
 
@@ -325,6 +357,42 @@
     </div>
 
     <div class="container pb-5">
+
+        <!-- Painel de configurações GitHub -->
+        <div class="github-panel" id="githubPanel" style="display:none">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <strong style="font-size:0.95rem;"><i class="bi bi-github me-2" style="color:var(--gold)"></i>Configurações GitHub</strong>
+                <button class="btn-icon" onclick="toggleGithubSettings()" title="Fechar"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-5">
+                    <label class="form-label">Token de acesso pessoal (PAT)</label>
+                    <input type="password" class="form-control" id="ghToken" placeholder="ghp_xxxxxxxxxxxx">
+                    <div class="form-text" style="font-size:0.7rem">
+                        <a href="https://github.com/settings/tokens/new?scopes=repo&description=AuraJoiasAdmin" target="_blank" style="color:var(--gold-dark)">Gerar token</a> com permissão <code>repo</code>. Salvo localmente no navegador.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Usuário / Organização</label>
+                    <input type="text" class="form-control" id="ghOwner" placeholder="Ex: meuusuario">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Repositório</label>
+                    <input type="text" class="form-control" id="ghRepo" placeholder="Ex: aurajoias">
+                </div>
+                <div class="col-md-1">
+                    <label class="form-label">Branch</label>
+                    <input type="text" class="form-control" id="ghBranch" value="main">
+                </div>
+            </div>
+            <div class="mt-3 d-flex align-items-center gap-2">
+                <button class="btn btn-gold btn-sm" onclick="salvarConfigGithub()">
+                    <i class="bi bi-floppy me-1"></i>Salvar configurações
+                </button>
+                <span id="ghConfigStatus" class="github-status text-muted"></span>
+            </div>
+        </div>
+
         <div class="row g-4">
 
             <!-- ── Coluna esquerda: formulário ── -->
@@ -453,12 +521,15 @@
                 <div class="panel">
                     <div class="panel-title d-flex justify-content-between align-items-center">
                         <span><i class="bi bi-list-ul"></i> Produtos cadastrados &nbsp;<span class="count-badge" id="countBadge">0</span></span>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex gap-2 flex-wrap">
                             <button class="btn btn-outline-gold btn-sm" onclick="copiarJSON()">
                                 <i class="bi bi-clipboard me-1"></i>Copiar JSON
                             </button>
                             <button class="btn btn-gold btn-sm" onclick="baixarJSON()">
                                 <i class="bi bi-download me-1"></i>Baixar JSON
+                            </button>
+                            <button class="btn btn-github btn-sm" id="btnPublicar" onclick="publicarNoGithub()">
+                                <i class="bi bi-github me-1"></i>Publicar no GitHub
                             </button>
                         </div>
                     </div>
@@ -485,13 +556,24 @@
                     </div>
 
                     <!-- Instruções de exportação -->
-                    <div class="mt-4 p-3 rounded" style="background:#f9f6f0;border:1px solid #ede5d0;font-size:0.8rem;color:#666;">
+                    <div class="mt-4 p-3 rounded" id="instrucoes" style="background:#f9f6f0;border:1px solid #ede5d0;font-size:0.8rem;color:#666;">
                         <strong style="color:var(--dark)"><i class="bi bi-info-circle me-1" style="color:var(--gold)"></i>Como salvar os produtos:</strong>
-                        <ol class="mb-0 mt-2 ps-3" style="line-height:1.8">
-                            <li>Coloque as imagens na pasta <code>imagens/</code></li>
-                            <li>Clique em <strong>Baixar JSON</strong> e salve como <code>produtos.json</code> na raiz do projeto</li>
-                            <li>Faça o commit e push normalmente no GitHub</li>
-                        </ol>
+                        <div id="instrucaoGithub" style="display:none">
+                            <ol class="mb-0 mt-2 ps-3" style="line-height:1.8">
+                                <li>Adicione/edite produtos normalmente</li>
+                                <li>Clique em <strong>Publicar no GitHub</strong> — o <code>produtos.json</code> é atualizado automaticamente</li>
+                                <li>O GitHub Actions fará o deploy em alguns segundos</li>
+                            </ol>
+                        </div>
+                        <div id="instrucaoManual">
+                            <ol class="mb-0 mt-2 ps-3" style="line-height:1.8">
+                                <li>Coloque as imagens na pasta <code>imagens/</code></li>
+                                <li>Clique em <strong>Baixar JSON</strong> e salve como <code>produtos.json</code> na raiz do projeto</li>
+                                <li>Faça o commit e push normalmente no GitHub</li>
+                                <li>Ou configure o <strong>GitHub</strong> (botão no topo) para publicar automaticamente</li>
+                            </ol>
+                        </div>
+                        <div id="publishStatus" class="github-status mt-2" style="display:none"></div>
                     </div>
                 </div>
             </div>
@@ -789,8 +871,122 @@
             bootstrap.Toast.getOrCreateInstance(toastEl, { delay: 2800 }).show();
         }
 
+        // ── GitHub integration ──
+        const GH_KEY = 'aura_gh_config';
+
+        function carregarConfigGithub() {
+            const cfg = JSON.parse(localStorage.getItem(GH_KEY) || '{}');
+            if (cfg.token) document.getElementById('ghToken').value = cfg.token;
+            if (cfg.owner) document.getElementById('ghOwner').value = cfg.owner;
+            if (cfg.repo)  document.getElementById('ghRepo').value  = cfg.repo;
+            if (cfg.branch) document.getElementById('ghBranch').value = cfg.branch;
+            atualizarInstrucoes();
+        }
+
+        function salvarConfigGithub() {
+            const cfg = {
+                token:  document.getElementById('ghToken').value.trim(),
+                owner:  document.getElementById('ghOwner').value.trim(),
+                repo:   document.getElementById('ghRepo').value.trim(),
+                branch: document.getElementById('ghBranch').value.trim() || 'main',
+            };
+            if (!cfg.token || !cfg.owner || !cfg.repo) {
+                document.getElementById('ghConfigStatus').innerHTML = '<span class="text-danger">Preencha todos os campos.</span>';
+                return;
+            }
+            localStorage.setItem(GH_KEY, JSON.stringify(cfg));
+            document.getElementById('ghConfigStatus').innerHTML = '<span class="text-success"><i class="bi bi-check-circle me-1"></i>Salvo com sucesso!</span>';
+            atualizarInstrucoes();
+            setTimeout(() => document.getElementById('ghConfigStatus').textContent = '', 3000);
+        }
+
+        function toggleGithubSettings() {
+            const panel = document.getElementById('githubPanel');
+            panel.style.display = panel.style.display === 'none' ? '' : 'none';
+        }
+
+        function atualizarInstrucoes() {
+            const cfg = JSON.parse(localStorage.getItem(GH_KEY) || '{}');
+            const configurado = !!(cfg.token && cfg.owner && cfg.repo);
+            document.getElementById('instrucaoGithub').style.display = configurado ? '' : 'none';
+            document.getElementById('instrucaoManual').style.display = configurado ? 'none' : '';
+        }
+
+        async function publicarNoGithub() {
+            if (produtos.length === 0) {
+                mostrarToast('Nenhum produto para publicar.', 'warning');
+                return;
+            }
+
+            const cfg = JSON.parse(localStorage.getItem(GH_KEY) || '{}');
+            if (!cfg.token || !cfg.owner || !cfg.repo) {
+                mostrarToast('Configure o GitHub primeiro (botão no topo).', 'warning');
+                document.getElementById('githubPanel').style.display = '';
+                return;
+            }
+
+            const btn = document.getElementById('btnPublicar');
+            const statusEl = document.getElementById('publishStatus');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Publicando...';
+            statusEl.style.display = '';
+            statusEl.innerHTML = '<span class="text-muted"><i class="bi bi-hourglass-split me-1"></i>Conectando ao GitHub...</span>';
+
+            const branch = cfg.branch || 'main';
+            const apiBase = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/produtos.json`;
+            const headers = {
+                'Authorization': `Bearer ${cfg.token}`,
+                'Accept': 'application/vnd.github+json',
+                'Content-Type': 'application/json',
+            };
+
+            try {
+                // Busca o SHA atual do arquivo para poder atualizá-lo
+                let sha = null;
+                const getResp = await fetch(`${apiBase}?ref=${branch}`, { headers });
+                if (getResp.ok) {
+                    const existing = await getResp.json();
+                    sha = existing.sha;
+                } else if (getResp.status !== 404) {
+                    throw new Error(`Erro ao buscar arquivo: ${getResp.status} ${getResp.statusText}`);
+                }
+
+                statusEl.innerHTML = '<span class="text-muted"><i class="bi bi-cloud-upload me-1"></i>Enviando produtos.json...</span>';
+
+                const content = btoa(unescape(encodeURIComponent(JSON.stringify(produtos, null, 4))));
+                const body = {
+                    message: `Atualização de produtos via painel admin (${new Date().toLocaleString('pt-BR')})`,
+                    content,
+                    branch,
+                };
+                if (sha) body.sha = sha;
+
+                const putResp = await fetch(apiBase, {
+                    method: 'PUT',
+                    headers,
+                    body: JSON.stringify(body),
+                });
+
+                if (!putResp.ok) {
+                    const err = await putResp.json();
+                    throw new Error(err.message || `Erro ${putResp.status}`);
+                }
+
+                statusEl.innerHTML = '<span class="text-success"><i class="bi bi-check-circle-fill me-1"></i>Publicado! O deploy será feito em instantes.</span>';
+                mostrarToast('produtos.json publicado no GitHub com sucesso!', 'success');
+
+            } catch (err) {
+                statusEl.innerHTML = `<span class="text-danger"><i class="bi bi-exclamation-triangle me-1"></i>${err.message}</span>`;
+                mostrarToast('Erro ao publicar. Verifique o token e tente novamente.', 'danger');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-github me-1"></i>Publicar no GitHub';
+            }
+        }
+
         // ── Init ──
         carregarProdutos();
+        carregarConfigGithub();
         atualizarPreview();
     </script>
 </body>
